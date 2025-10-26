@@ -90,23 +90,9 @@
       </div>
       {% endif %}
     </div>
-    {% if SHARE %}
-    <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
-      {% for name, link in SHARE %}
-      <ul>
-        <li class="bg-gray-900 p-1 text-white rounded-md">
-          <a target="_blank" rel="noopener noreferrer" title="{{ name }}" aria-label="share Features on {{ name }}"
-            href="{{ link }}{{ SITEURL }}/{{ article.url }}">
-            <i class="fab fa-{{ name }} fa-2x" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-      {% endfor %}
-    </div>
-    {% endif %}
   </footer>
-  <div>
-    {% include 'disqus_script.html' %}
+  <div class="mt-10">
+    {% include 'include/comments.html' %}
   </div>
 </main>
 

@@ -24,6 +24,7 @@
         type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
     {% endif %}
     {% endblock head %}
+    {% include "include/ga.html" %}
 </head>
 
 <body :class="{ 'dark': dark }" class="min-h-screen text-zinc-800 bg-neutral-100 dark:bg-neutral-900 dark:text-zinc-300">
