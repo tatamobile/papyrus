@@ -183,12 +183,6 @@
         {% block content %} {% endblock %}
         </main>
         <aside class="space-y-4">
-            {% if ADSENSE_SLOT_ID %}
-            <!-- AD -->
-            <div class="p-4">
-            </div>
-            {% endif %}
-
             <!-- Recent Posts -->
             <div class="bg-white dark:bg-zinc-800 rounded p-4">
                 <h3 class="font-semibold text-xl mb-3">Recent Posts</h3>
@@ -211,6 +205,11 @@
                     {% endfor %}
                 </ul>
             </div>
+            {% if ADSENSE_SLOT_ID %}
+            <div class="p-4">
+            {% include 'include/adsense.html' %}
+            </div>
+            {% endif %}
         </aside>
     </div>
     <footer class="w-full text-xs mt-12 py-6 text-zinc-800 bg-neutral-100 dark:bg-neutral-900 dark:text-zinc-300 border-t border-gray-200 dark:border-gray-700">
